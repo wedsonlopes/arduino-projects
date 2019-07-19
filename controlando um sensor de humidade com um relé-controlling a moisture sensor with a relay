@@ -1,0 +1,30 @@
+/*
+autor : Wedson Lopes de Lima
+email  : wedsonjti@gmail.com
+
+Esse projeto foi desenvolvido para automatizar a irrigação de uma pequena horta
+*/
+
+#define bomba_horta 1
+
+float porcentagem_da_humidade;
+int sensor_analog;
+const int sensor_humidade = A1;
+
+void setup()
+{
+  pinMode(bomba_horta, OUTPUT);
+}
+void loop()
+{
+  sensor_analog = analogRead(sensor_humidade);
+  porcentagem_da_humidade = ( 100 - ( (sensor_analog / 1023.00) * 100 ) );
+  if (porcentagem_da_humidade <= 15)
+  {
+    digitalWrite(bomba_horta, LOW);
+  }
+  else
+  {
+    digitalWrite(bomba_horta, HIGH);
+  }
+}
