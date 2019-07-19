@@ -1,0 +1,11 @@
+Relay Pins          Arduino
+        vcc---------5volts
+        Gnd---------Gnd
+        In----------Logic port 1
+        
+Moisture Sensor         Arduino
+              vcc---------5volts
+              Gnd---------Gnd
+              AO----------Analogic Port 1
+              DO----------No Conection(I didn't use it)
+             
